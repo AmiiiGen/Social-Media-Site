@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  socialsite_postgresql:
+    image: postgres:12
+    container_name: socialsite_postgresql
+    volumes:
+      - socialsite_postgresql:/var/postgresql/lib/data
+    restart: always
+    env_file: .env
+    ports:
+      - "5432:5432"
+    networks:
+      - socialsite_network
+volumes:
+  socialsite_postgresql:
+    external: true
+networks:
+  socialsite_network:
+    external: true
