@@ -14,6 +14,8 @@ db.sqlite3
 
 # Migrations
 accounts/migrations/
+groups/migrations/
+posts/migrations/
 
 # Credentials
 .env
